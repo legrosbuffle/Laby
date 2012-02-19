@@ -1,0 +1,43 @@
+INTRODUCTION:
+
+This is a simple C++ code to solve Hanamaya's cast Laby automatically.
+More info on this project can be found online at http://www.somebod.com.
+
+AUTHOR:
+
+Clement Courbet
+
+LICENSE:
+ MIT (see source code)
+
+REQUIREMENTS:
+ For solving:
+  - g++ 4.4
+ For visualization:
+  - Blender 2.43 with python
+
+COMPILING:
+
+The code is known to compile on linux using g++ 4.4.
+There are no external dependencies.
+Simply run 'make' in the current directory.
+
+RUNNING:
+
+To solve the original Hanamaya Cast Laby, run the program with:
+
+./laby laby.ppm 52.5 240 s > output.path
+
+This tells the program to read the geometry definition from laby.ppm,
+and defines the inter-pin distance and ring size to be 52.5 and 240 respectively.
+The 's' switches the top and bottom labyrinths.
+
+The output goes into 'output.path'.
+You can use pgmtoobj to create a 3D model:
+
+./pgmtoobj laby.ppm > output.obj
+
+And import it into blender using the 'Wavefron OBJ' importer.
+
+To import the output paths into blender, open 'makepaths.py' into
+blender and edit the filename to be 'output.path'.
